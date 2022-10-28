@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <div class="middle">
+        <h3>Sign Up Form</h3>
+    </div>
+
+    <div class="middle">
+        <div class="form">
+
+            <div>
+                <label for="Name" class="astrik"> Name </label>
+            </div>
+            <div class="Name">
+                <input type="text" class="FName" placeholder="First" required />
+                <input type="text" class="LName" placeholder="Last" required />
+            </div>
+
+            <div>
+                <label for="username" class="astrik">Choose your username </label>
+            </div>
+            <div class="uname">
+                <input type="text" class="username" placeholder="@gmail.com" required />
+            </div>
+
+            <div>
+                <label for="password" class="astrik"> Create a password </label>
+            </div>
+            <div class="pass">
+                <input type="password" class="password" required />
+            </div>
+
+            <div>
+                <label for="repassword" class="astrik"> Confirm your password </label>
+            </div>
+            <div class="repass">
+                <input type="password" class="repassword" required />
+            </div>
+
+            <div>
+                <label for="birthday" class="astrik"> Birthday </label>
+            </div>
+            <div>
+                <input type="date" class="birthday" required />
+            </div>
+
+            <div>
+                <label for="gender" class="astrik"> Gender </label>
+            </div>
+            <div>
+                <select class="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="phnum" class="astrik"> Mobile phone </label>
+            </div>
+            <div class="phnumber">
+                <input type="number" class="phnum" required onKeyPress="if(this.value.length==10) return false;"/>
+            </div>
+
+            <div>
+                <label for="email" class="astrik"> Your current email address </label>
+            </div>
+            <div class="emailaddress">
+                <input type="email" class="email" required />
+            </div>
+
+            <div class="middle">
+                <button class="submit" type="submit">Submit</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script type="module" src="index.js"></script>
+</html>
