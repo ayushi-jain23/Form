@@ -7,77 +7,67 @@
     <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-    <div class="middle">
-        <h3>Sign Up Form</h3>
+    <div class="cssCenter">
+        <h2>Sign Up Form</h2>
     </div>
 
-    <div class="middle">
+    <div class="cssCenter">
         <div class="form">
 
-            <div>
-                <label for="Name" class="astrik"> Name </label>
-            </div>
             <div class="Name">
-                <input type="text" class="FName" placeholder="First" required />
-                <input type="text" class="LName" placeholder="Last" required />
+                <label for="name" class="astrik"> Name </label> <br>
+                <input id="name" type="text" class="firstName" placeholder="First" required />
+                <input type="text" class="lastName" placeholder="Last" required />
+            </div>
+
+
+            <div class="username">
+                <label for="username" class="astrik">Choose your username </label> <br>
+                <input id="username" type="text" class="input_username" placeholder="@gmail.com" required />
+            </div>
+
+            <div class="password">
+                <label for="password" class="astrik"> Create a password </label> <br>
+                <input id="password" type="password" class="input_password" required />
+            </div>
+
+            <div class="repassword">
+                <label for="repassword" class="astrik"> Confirm your password </label> <br>
+                <input id="repassword" type="password" class="input_repassword" required />
             </div>
 
             <div>
-                <label for="username" class="astrik">Choose your username </label>
-            </div>
-            <div class="uname">
-                <input type="text" class="username" placeholder="@gmail.com" required />
+                <label for="birthday" class="astrik"> Birthday </label> <br>
+                <input id="birthday" type="date" class="birthday" required />
             </div>
 
             <div>
-                <label for="password" class="astrik"> Create a password </label>
-            </div>
-            <div class="pass">
-                <input type="password" class="password" required />
-            </div>
-
-            <div>
-                <label for="repassword" class="astrik"> Confirm your password </label>
-            </div>
-            <div class="repass">
-                <input type="password" class="repassword" required />
-            </div>
-
-            <div>
-                <label for="birthday" class="astrik"> Birthday </label>
-            </div>
-            <div>
-                <input type="date" class="birthday" required />
-            </div>
-
-            <div>
-                <label for="gender" class="astrik"> Gender </label>
-            </div>
-            <div>
-                <select class="gender" required>
+                <label for="gender" class="astrik"> Gender </label> <br>
+                <select id="gender" class="gender" required>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                     <option value="Others">Others</option>
                 </select>
             </div>
 
-            <div>
-                <label for="phnum" class="astrik"> Mobile phone </label>
-            </div>
             <div class="phnumber">
-                <input type="number" class="phnum" required onKeyPress="if(this.value.length==10) return false;"/>
+                <label for="phnum" class="astrik"> Mobile phone </label> <br>
+                <input id="phnum" type="number" class="input_phnum" required onKeyPress="if(this.value.length==10) return false;"/>
             </div>
 
-            <div>
-                <label for="email" class="astrik"> Your current email address </label>
-            </div>
             <div class="emailaddress">
-                <input type="email" class="email" required />
+                <label for="email" class="astrik"> Your current email address </label> <br>
+                <input id="email" type="email" class="input_email" required />
             </div>
 
-            <div class="middle">
+            <div class="cssCenter">
                 <button class="submit" type="submit">Submit</button>
             </div>
+
+
+
+
+
 
         </div>
     </div>

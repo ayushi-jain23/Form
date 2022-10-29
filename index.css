@@ -1,6 +1,12 @@
-.middle{
+body{
+    background-color: #24449e;
+}
+.cssCenter{
     display: flex;
     justify-content: center;
+}
+h2{
+    color: white;
 }
 .form{
     background-color: #cbe4f5;
@@ -14,6 +20,7 @@
 div{
     font-size: 25px;
     padding: 1px;
+    margin-bottom: 6px;
 }
 .astrik:after{
     content:" *";
@@ -23,7 +30,7 @@ input{
     padding: 5px;
     font-size: 20px;
     border-radius: 8px;
-    margin-bottom: 5px;
+    margin: 2px 0 5px 0;
     border: 1px solid black;
 }
 .error{
@@ -31,9 +38,10 @@ input{
     font-size: 15px;
 }
 select{
-    font-size: 18px;
+    padding: 5px;
+    font-size: 20px;
     border-radius: 8px;
-    margin-bottom: 5px;
+    margin: 2px 0 5px 0;
     border: 1px solid black;
 }
 button{
