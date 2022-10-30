@@ -21,9 +21,9 @@ form.addEventListener('focusout', function (e) {
     if (child && child.value === '') {
         error.innerHTML = 'This field is mandatory.';
         parentsElement.append(error);
-    } else {
+    }
+    else {
         let classOfClickedInput = child.getAttribute('class');
-        console.log(child.getAttribute('class'));
 
         //password validation
         if (classOfClickedInput === 'input_password') {
@@ -31,7 +31,7 @@ form.addEventListener('focusout', function (e) {
             if (child.value.match(passRegex) || child.value === '') {
                 return true;
             } else {
-                error.innerHTML = 'Pass must have 8-15 characters, an uppercase letter, a lowercase letter, a number and a special character';
+                error.innerHTML = 'Password must have 8-15 characters, an uppercase letter, a lowercase letter, a number and a special character';
                 child.parentElement.append(error);
             }
         }
@@ -40,7 +40,7 @@ form.addEventListener('focusout', function (e) {
         else if (classOfClickedInput === 'input_repassword') {
             let password = document.querySelector('.input_password');
             if (password.value !== child.value && child.value !== '') {
-                error.innerHTML = "Pass doesn't match";
+                error.innerHTML = "Password doesn't match";
                 child.parentElement.append(error);
             }
         }
@@ -48,7 +48,7 @@ form.addEventListener('focusout', function (e) {
         //phone number validation
         else if (classOfClickedInput === 'input_phnum') {
             if (child.value.length > 0 && child.value.length <= 9) {
-                error.innerHTML = 'Please enter a valid ph num';
+                error.innerHTML = 'Please enter a valid Phone Number';
                 child.parentElement.append(error);
             }
         }
@@ -59,7 +59,7 @@ form.addEventListener('focusout', function (e) {
             if (child.value.match(mailRegex) || child.value === '') {
                 return true;
             } else {
-                error.innerHTML = 'Enter valid email in the format anystring@anystring.any';
+                error.innerHTML = 'Enter valid Email in the format anystring@anystring.any';
                 child.parentElement.append(error);
             }
         }
@@ -67,5 +67,25 @@ form.addEventListener('focusout', function (e) {
 });
 
 submit.addEventListener('click', function (e) {
-    alert("Form submitted successfully")
+    let inputElements = document.querySelectorAll('input');
+    let arr = [];
+    for (let i=0; i<inputElements.length; i++) {
+        let a = inputElements[i].parentElement;
+        let b = a.querySelector("div")
+        if (b !== null) {
+            arr.push(false);
+        }
+        else if (inputElements[i].value.length === 0) {
+            arr.push(false);
+        }
+        else {
+            arr.push(true);
+        }
+    }
+    if(arr.includes(false)){
+        alert("Please check if all fields are filled and correct");
+    }
+    else{
+        alert("Form submitted successfully");
+    }
 });
